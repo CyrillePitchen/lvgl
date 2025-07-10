@@ -362,6 +362,9 @@
 #if LV_USE_PPA
     #define LV_USE_PPA_IMG 0
 #endif
+
+/** Use Microchip's M2D on MPU platforms */
+#define LV_USE_DRAW_M2D 0
 /*=======================
  * FEATURE CONFIGURATION
  *=======================*/

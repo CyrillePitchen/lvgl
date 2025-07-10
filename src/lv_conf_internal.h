@@ -1000,6 +1000,15 @@
     #endif
 #endif
 
+/** Use Microchip's M2D on MPU platforms. */
+#ifndef LV_USE_DRAW_M2D
+    #ifdef CONFIG_LV_USE_DRAW_M2D
+        #define LV_USE_DRAW_M2D CONFIG_LV_USE_DRAW_M2D
+    #else
+	#define LV_USE_DRAW_M2D 0
+    #endif
+#endif
+
 /** Draw using espressif PPA accelerator */
 #ifndef LV_USE_PPA
     #ifdef CONFIG_LV_USE_PPA
