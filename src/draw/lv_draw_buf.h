@@ -87,6 +87,8 @@ typedef uint32_t (*lv_draw_buf_width_to_stride_cb)(uint32_t w, lv_color_format_t
 
 typedef lv_draw_buf_t * (*lv_draw_buf_create_cb)(const lv_draw_buf_handlers_t * handlers, uint32_t w, uint32_t h, lv_color_format_t cf, uint32_t stride);
 
+typedef lv_draw_buf_t * (*lv_draw_buf_import_cb)(const lv_draw_buf_handlers_t * handlers, const lv_draw_buf_import_dsc_t * dsc);
+
 typedef void (*lv_draw_buf_destroy_cb)(lv_draw_buf_t * draw_buf);
 
 struct _lv_draw_buf_t {

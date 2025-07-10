@@ -24,6 +24,15 @@ extern "C" {
  *      TYPEDEFS
  **********************/
 
+struct _lv_draw_buf_import_dsc_t {
+    uint32_t w;
+    uint32_t h;
+    lv_color_format_t cf;
+    uint32_t stride;
+    int32_t fd;
+    void * data;
+};
+
 struct _lv_draw_buf_handlers_t {
     lv_draw_buf_malloc_cb buf_malloc_cb;
     lv_draw_buf_free_cb buf_free_cb;
@@ -32,6 +41,7 @@ struct _lv_draw_buf_handlers_t {
     lv_draw_buf_cache_operation_cb flush_cache_cb;
     lv_draw_buf_width_to_stride_cb width_to_stride_cb;
     lv_draw_buf_create_cb create_cb;
+    lv_draw_buf_import_cb import_cb;
     lv_draw_buf_destroy_cb destroy_cb;
 };
 
