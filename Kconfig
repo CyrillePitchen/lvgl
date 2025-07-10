@@ -537,6 +537,10 @@ menu "LVGL configuration"
 		default n
 		depends on LV_USE_PPA
 
+		config LV_USE_DRAW_M2D
+			bool "Use Microchip's M2D on MPU platforms"
+			default n
+
 	endmenu
 
 	menu "Feature Configuration"
